@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		BD1B93702F3DB5E10032B6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD1B93582F3DB5DD0032B6B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1B935F2F3DB5DD0032B6B7;
+			remoteInfo = InputSwitcher;
+		};
+		BD1B937A2F3DB5E10032B6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD1B93582F3DB5DD0032B6B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1B935F2F3DB5DD0032B6B7;
+			remoteInfo = InputSwitcher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD1B93602F3DB5DD0032B6B7 /* かなCmd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "かなCmd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1B936F2F3DB5E10032B6B7 /* InputSwitcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputSwitcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1B93792F3DB5E10032B6B7 /* InputSwitcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputSwitcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BD1B938F2F3DB8DB0032B6B7 /* Exceptions for "InputSwitcher" folder in "InputSwitcher" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BD1B935F2F3DB5DD0032B6B7 /* InputSwitcher */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BD1B93622F3DB5DD0032B6B7 /* InputSwitcher */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BD1B938F2F3DB8DB0032B6B7 /* Exceptions for "InputSwitcher" folder in "InputSwitcher" target */,
+			);
+			path = InputSwitcher;
+			sourceTree = "<group>";
+		};
+		BD1B93722F3DB5E10032B6B7 /* InputSwitcherTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InputSwitcherTests;
+			sourceTree = "<group>";
+		};
+		BD1B937C2F3DB5E10032B6B7 /* InputSwitcherUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InputSwitcherUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD1B935D2F3DB5DD0032B6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1B936C2F3DB5E10032B6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1B93762F3DB5E10032B6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD1B93572F3DB5DD0032B6B7 = {
+			isa = PBXGroup;
+			children = (
+				BD1B93622F3DB5DD0032B6B7 /* InputSwitcher */,
+				BD1B93722F3DB5E10032B6B7 /* InputSwitcherTests */,
+				BD1B937C2F3DB5E10032B6B7 /* InputSwitcherUITests */,
+				BD1B93612F3DB5DD0032B6B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD1B93612F3DB5DD0032B6B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD1B93602F3DB5DD0032B6B7 /* かなCmd.app */,
+				BD1B936F2F3DB5E10032B6B7 /* InputSwitcherTests.xctest */,
+				BD1B93792F3DB5E10032B6B7 /* InputSwitcherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD1B935F2F3DB5DD0032B6B7 /* InputSwitcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1B93832F3DB5E10032B6B7 /* Build configuration list for PBXNativeTarget "InputSwitcher" */;
+			buildPhases = (
+				BD1B935C2F3DB5DD0032B6B7 /* Sources */,
+				BD1B935D2F3DB5DD0032B6B7 /* Frameworks */,
+				BD1B935E2F3DB5DD0032B6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BD1B93622F3DB5DD0032B6B7 /* InputSwitcher */,
+			);
+			name = InputSwitcher;
+			packageProductDependencies = (
+			);
+			productName = InputSwitcher;
+			productReference = BD1B93602F3DB5DD0032B6B7 /* かなCmd.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD1B936E2F3DB5E10032B6B7 /* InputSwitcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1B93862F3DB5E10032B6B7 /* Build configuration list for PBXNativeTarget "InputSwitcherTests" */;
+			buildPhases = (
+				BD1B936B2F3DB5E10032B6B7 /* Sources */,
+				BD1B936C2F3DB5E10032B6B7 /* Frameworks */,
+				BD1B936D2F3DB5E10032B6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1B93712F3DB5E10032B6B7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BD1B93722F3DB5E10032B6B7 /* InputSwitcherTests */,
+			);
+			name = InputSwitcherTests;
+			packageProductDependencies = (
+			);
+			productName = InputSwitcherTests;
+			productReference = BD1B936F2F3DB5E10032B6B7 /* InputSwitcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD1B93782F3DB5E10032B6B7 /* InputSwitcherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1B93892F3DB5E10032B6B7 /* Build configuration list for PBXNativeTarget "InputSwitcherUITests" */;
+			buildPhases = (
+				BD1B93752F3DB5E10032B6B7 /* Sources */,
+				BD1B93762F3DB5E10032B6B7 /* Frameworks */,
+				BD1B93772F3DB5E10032B6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1B937B2F3DB5E10032B6B7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BD1B937C2F3DB5E10032B6B7 /* InputSwitcherUITests */,
+			);
+			name = InputSwitcherUITests;
+			packageProductDependencies = (
+			);
+			productName = InputSwitcherUITests;
+			productReference = BD1B93792F3DB5E10032B6B7 /* InputSwitcherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD1B93582F3DB5DD0032B6B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					BD1B935F2F3DB5DD0032B6B7 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					BD1B936E2F3DB5E10032B6B7 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = BD1B935F2F3DB5DD0032B6B7;
+					};
+					BD1B93782F3DB5E10032B6B7 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = BD1B935F2F3DB5DD0032B6B7;
+					};
+				};
+			};
+			buildConfigurationList = BD1B935B2F3DB5DD0032B6B7 /* Build configuration list for PBXProject "InputSwitcher" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD1B93572F3DB5DD0032B6B7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BD1B93612F3DB5DD0032B6B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD1B935F2F3DB5DD0032B6B7 /* InputSwitcher */,
+				BD1B936E2F3DB5E10032B6B7 /* InputSwitcherTests */,
+				BD1B93782F3DB5E10032B6B7 /* InputSwitcherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD1B935E2F3DB5DD0032B6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1B936D2F3DB5E10032B6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1B93772F3DB5E10032B6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD1B935C2F3DB5DD0032B6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1B936B2F3DB5E10032B6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1B93752F3DB5E10032B6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD1B93712F3DB5E10032B6B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD1B935F2F3DB5DD0032B6B7 /* InputSwitcher */;
+			targetProxy = BD1B93702F3DB5E10032B6B7 /* PBXContainerItemProxy */;
+		};
+		BD1B937B2F3DB5E10032B6B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD1B935F2F3DB5DD0032B6B7 /* InputSwitcher */;
+			targetProxy = BD1B937A2F3DB5E10032B6B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BD1B93812F3DB5E10032B6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD1B93822F3DB5E10032B6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		BD1B93842F3DB5E10032B6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InputSwitcher/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "入力モードの切り替えに使用します";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baked-apple.kanaCmd";
+				PRODUCT_NAME = "かなCmd";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BD1B93852F3DB5E10032B6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InputSwitcher/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "入力モードの切り替えに使用します";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baked-apple.kanaCmd";
+				PRODUCT_NAME = "かなCmd";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BD1B93872F3DB5E10032B6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baked-apple.InputSwitcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputSwitcher.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InputSwitcher";
+			};
+			name = Debug;
+		};
+		BD1B93882F3DB5E10032B6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baked-apple.InputSwitcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputSwitcher.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InputSwitcher";
+			};
+			name = Release;
+		};
+		BD1B938A2F3DB5E10032B6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baked-apple.InputSwitcherUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = InputSwitcher;
+			};
+			name = Debug;
+		};
+		BD1B938B2F3DB5E10032B6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baked-apple.InputSwitcherUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = InputSwitcher;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD1B935B2F3DB5DD0032B6B7 /* Build configuration list for PBXProject "InputSwitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1B93812F3DB5E10032B6B7 /* Debug */,
+				BD1B93822F3DB5E10032B6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD1B93832F3DB5E10032B6B7 /* Build configuration list for PBXNativeTarget "InputSwitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1B93842F3DB5E10032B6B7 /* Debug */,
+				BD1B93852F3DB5E10032B6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD1B93862F3DB5E10032B6B7 /* Build configuration list for PBXNativeTarget "InputSwitcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1B93872F3DB5E10032B6B7 /* Debug */,
+				BD1B93882F3DB5E10032B6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD1B93892F3DB5E10032B6B7 /* Build configuration list for PBXNativeTarget "InputSwitcherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1B938A2F3DB5E10032B6B7 /* Debug */,
+				BD1B938B2F3DB5E10032B6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD1B93582F3DB5DD0032B6B7 /* Project object */;
+}
