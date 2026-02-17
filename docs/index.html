@@ -12,17 +12,15 @@
   <meta property="og:title" content="かなCmd（KanaCmd）｜US配列の「かな/英数」を⌘単押しで切替" />
   <meta property="og:description" content="US配列キーボードで左右⌘単押しで「かな/英数」を切替するmacOSメニューバーアプリ。⌘英かな代替にも。" />
   <meta property="og:type" content="website" />
-  <!-- TODO: 公開後に実URLへ -->
-  <meta property="og:url" content="https://example.com/kanacmd/" />
-  <!-- TODO: OGP画像を用意したら差し替え -->
-  <meta property="og:image" content="https://example.com/kanacmd/ogp.png" />
+  <meta property="og:url" content="https://baked-appleholic.github.io/kanacmd/" />
+  <!-- OGP画像を置いたら有効化（docs/ogp.png 推奨） -->
+  <!-- <meta property="og:image" content="https://baked-appleholic.github.io/kanacmd/ogp.png" /> -->
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
     :root{
       --bg: #0b0f17;
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.09);
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.68);
       --line: rgba(255,255,255,.12);
@@ -30,13 +28,11 @@
       --accent2:#b7ffdf;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 22px;
-      --radius2: 14px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro JP", "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
       color:var(--text);
       background:
         radial-gradient(1100px 700px at 15% 10%, rgba(141,213,255,.18), transparent 50%),
@@ -114,43 +110,9 @@
       background: linear-gradient(135deg, rgba(141,213,255,.24), rgba(183,255,223,.18));
     }
     .btnPrimary:hover{filter:brightness(1.06)}
-    .mini{
-      font-size:12px;color:rgba(255,255,255,.62);margin-top:10px
-    }
-    .sideCard{padding:22px}
-    .sideTitle{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 10px}
-    .statGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .stat{
-      padding:12px;border-radius:16px;
-      background: rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .stat b{display:block;font-size:13px}
-    .stat span{display:block;margin-top:4px;color:rgba(255,255,255,.68);font-size:12px;line-height:1.4}
-    .cmdVisual{
-      margin-top:14px;padding:16px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(140% 140% at 20% 20%, rgba(255,255,255,.12), rgba(255,255,255,.03) 55%, rgba(0,0,0,.2) 100%);
-    }
-    .cmdLine{display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .pill{
-      font-size:12px;color:rgba(255,255,255,.78);
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
-      padding:7px 10px;border-radius:999px;
-      white-space:nowrap;
-    }
-    .kbd{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-weight:700;
-      font-size:20px;
-      padding:10px 12px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
-      display:inline-flex;align-items:center;gap:8px;
-    }
-    .arrow{opacity:.85}
+    .mini{font-size:12px;color:rgba(255,255,255,.62);margin-top:10px}
+    .badgeRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .badgeRow img{height:20px}
     section{margin-top:24px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media (max-width: 900px){.grid3{grid-template-columns:1fr}}
@@ -158,41 +120,10 @@
     .feature h3{margin:0 0 8px;font-size:16px}
     .feature p{margin:0;color:var(--muted);line-height:1.6;font-size:13px}
     .sectionTitle{font-size:18px;margin:0 0 12px}
-    .twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width: 900px){.twoCol{grid-template-columns:1fr}}
-    .step{padding:18px}
-    .step ol{margin:0;padding-left:20px;color:var(--muted);line-height:1.8}
-    .codeBox{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      background: rgba(0,0,0,.25);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:16px;
-      padding:14px;
-      color: rgba(255,255,255,.85);
-      font-size:12px;line-height:1.6;
-      overflow:auto;
-    }
-    .faq{padding:18px}
-    details{
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:16px;
-      background: rgba(255,255,255,.04);
-      padding:12px 14px;
-    }
-    details + details{margin-top:10px}
-    summary{cursor:pointer;font-weight:650}
-    details p{margin:10px 0 0;color:var(--muted);line-height:1.7;font-size:13px}
     footer{margin-top:34px;color:rgba(255,255,255,.55);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .badgeRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .badgeRow img{height:20px}
-    .notice{
-      padding:14px 16px;border-radius:16px;border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      color: rgba(255,255,255,.74);
-      font-size:12px;line-height:1.7;
-    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -200,13 +131,12 @@
         <div class="logo" aria-hidden="true"><span>⌘</span></div>
         <div>
           <div style="font-weight:750;line-height:1">かなCmd</div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.2">KanaCmd for macOS</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.68);line-height:1.2">KanaCmd for macOS</div>
         </div>
       </div>
       <nav>
         <a href="#features">機能</a>
         <a href="#install">インストール</a>
-        <a href="#faq">FAQ</a>
         <a href="#links">リンク</a>
       </nav>
     </header>
@@ -218,76 +148,32 @@
           <h1>左右⌘の単押しで<br/>「かな / 英数」を切り替える</h1>
           <p class="sub">
             <b>かなCmd</b>は、US配列キーボード環境で左右の Command（⌘）キー単押しにより入力ソース（かな / 英数）を切り替える
-            <b>macOSメニューバー常駐アプリ</b>です。macOSアップデート後に既存ツールが不安定になったときの代替にも。
+            <b>macOSメニューバー常駐アプリ</b>です。
           </p>
 
           <div class="ctaRow">
-            <!-- TODO: あなたのリポジトリURLに差し替え -->
-            <a class="btn btnPrimary" href="https://github.com/<YOUR-USER>/<YOUR-REPO>/releases/latest" target="_blank" rel="noopener">
+            <a class="btn btnPrimary" href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener">
               ⬇︎ Download（最新版）
             </a>
-            <a class="btn" href="https://github.com/<YOUR-USER>/<YOUR-REPO>" target="_blank" rel="noopener">
+            <a class="btn" href="https://github.com/baked-appleholic/kanacmd" target="_blank" rel="noopener">
               GitHubを見る
             </a>
           </div>
 
           <div class="badgeRow" aria-label="badges">
-            <!-- TODO: <YOUR-USER>/<YOUR-REPO> を実値に -->
-            <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>/releases/latest" target="_blank" rel="noopener">
-              <img alt="release" src="https://img.shields.io/github/v/release/<YOUR-USER>/<YOUR-REPO>?cacheSeconds=300" />
+            <a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener">
+              <img alt="release" src="https://img.shields.io/github/v/release/baked-appleholic/kanacmd?cacheSeconds=300" />
             </a>
-            <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>/releases" target="_blank" rel="noopener">
-              <img alt="downloads" src="https://img.shields.io/github/downloads/<YOUR-USER>/<YOUR-REPO>/total?cacheSeconds=300" />
+            <a href="https://github.com/baked-appleholic/kanacmd/releases" target="_blank" rel="noopener">
+              <img alt="downloads" src="https://img.shields.io/github/downloads/baked-appleholic/kanacmd/total?cacheSeconds=300" />
             </a>
-            <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>/blob/main/LICENSE" target="_blank" rel="noopener">
-              <img alt="license" src="https://img.shields.io/github/license/<YOUR-USER>/<YOUR-REPO>?cacheSeconds=300" />
+            <a href="https://github.com/baked-appleholic/kanacmd/blob/main/LICENSE" target="_blank" rel="noopener">
+              <img alt="license" src="https://img.shields.io/github/license/baked-appleholic/kanacmd?cacheSeconds=300" />
             </a>
           </div>
 
-          <p class="mini">※ 初回起動では「右クリック → 開く」が必要な場合があります（Gatekeeper）。</p>
+          <p class="mini">※ 初回起動でブロックされた場合：Finderで右クリック →「開く」</p>
         </div>
-
-        <aside class="glass sideCard">
-          <p class="sideTitle">ワンポイント</p>
-          <div class="statGrid">
-            <div class="stat">
-              <b>対象</b>
-              <span>US配列 / 英語⇄日本語の切替に困る人</span>
-            </div>
-            <div class="stat">
-              <b>形式</b>
-              <span>メニューバー常駐（軽量）</span>
-            </div>
-            <div class="stat">
-              <b>切替</b>
-              <span>左右⌘単押し（誤爆しにくい）</span>
-            </div>
-            <div class="stat">
-              <b>補助</b>
-              <span>割当変更・ログイン時起動・診断</span>
-            </div>
-          </div>
-
-          <div class="cmdVisual" aria-label="visual">
-            <div class="cmdLine">
-              <span class="pill">左⌘</span>
-              <span class="kbd">⌘</span>
-              <span class="arrow">→</span>
-              <span class="pill">かな</span>
-            </div>
-            <div style="height:10px"></div>
-            <div class="cmdLine">
-              <span class="pill">右⌘</span>
-              <span class="kbd">⌘</span>
-              <span class="arrow">→</span>
-              <span class="pill">英数</span>
-            </div>
-            <div style="margin-top:12px" class="notice">
-              権限：<b>入力監視</b>（Input Monitoring）と <b>アクセシビリティ</b>（Accessibility）が必要です。<br/>
-              アプリ内「診断」で状態確認できます。
-            </div>
-          </div>
-        </aside>
       </div>
 
       <section id="features">
@@ -295,135 +181,39 @@
         <div class="grid3">
           <div class="glass feature">
             <h3>左右⌘の単押しで切替</h3>
-            <p>Commandキー単押しだけを検知し、かな/英数へ切り替えます。ショートカットの邪魔をしにくい設計。</p>
+            <p>Commandキー単押しだけを検知し、かな/英数へ切り替えます。</p>
           </div>
           <div class="glass feature">
             <h3>割り当ての入れ替え</h3>
-            <p>左⌘=かな／右⌘=英数 をワンタップで反転。環境に合わせて調整できます。</p>
+            <p>左⌘=かな／右⌘=英数 をワンタップで反転できます。</p>
           </div>
           <div class="glass feature">
             <h3>ログイン時起動</h3>
-            <p>ログイン時に自動起動できるので、常用でも忘れません（macOS 13+）。</p>
-          </div>
-          <div class="glass feature">
-            <h3>Dock表示の切替</h3>
-            <p>Dockに表示/非表示を選べます。常駐ツールっぽくスッキリ運用できます。</p>
-          </div>
-          <div class="glass feature">
-            <h3>診断メニュー</h3>
-            <p>権限状態（入力監視/アクセシビリティ）やEventTapの状態を確認でき、トラブル時の切り分けが楽。</p>
-          </div>
-          <div class="glass feature">
-            <h3>軽量・シンプル</h3>
-            <p>余計な設定を増やさず、必要な機能だけに絞ったミニマル設計。</p>
+            <p>ログイン時に自動起動（macOS 13+）。メニューバーに常駐します。</p>
           </div>
         </div>
       </section>
 
       <section id="install">
         <h2 class="sectionTitle">インストール</h2>
-        <div class="twoCol">
-          <div class="glass step">
-            <h3 style="margin:0 0 10px">手順</h3>
-            <ol>
-              <li>Releasesから <b>最新版zip</b> をダウンロード</li>
-              <li>zipを展開し、<b>かなCmd.app</b> を <b>Applications（アプリケーション）</b> へ移動</li>
-              <li>初回起動時にブロックされたら：Finderでアプリを右クリック → <b>開く</b></li>
-              <li>権限を許可：<b>入力監視</b> と <b>アクセシビリティ</b></li>
-            </ol>
-            <div style="margin-top:12px" class="notice">
-              macOSの「システム設定 → プライバシーとセキュリティ」から設定できます。
-              許可後、アプリ再起動で反映されることがあります。
-            </div>
-          </div>
-
-          <div class="glass step">
-            <h3 style="margin:0 0 10px">権限（必須）</h3>
-            <div class="codeBox" role="note" aria-label="permissions">
-入力監視（Input Monitoring）
-  システム設定 → プライバシーとセキュリティ → 入力監視 → かなCmd をON
-
-アクセシビリティ（Accessibility）
-  システム設定 → プライバシーとセキュリティ → アクセシビリティ → かなCmd をON
-
-※ アプリ内メニュー「診断：状態を見る」で確認できます。
-            </div>
-            <div style="margin-top:12px" class="notice">
-              <b>Tip:</b> Xcodeから起動したビルドと /Applications のアプリを混ぜると、権限がズレる場合があります。
-              ふだん使いは /Applications から起動が安定です。
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq">
-        <h2 class="sectionTitle">FAQ</h2>
-        <div class="glass faq">
-          <details>
-            <summary>キーを押しても切り替わりません</summary>
-            <p>
-              まず「入力監視」と「アクセシビリティ」がONか確認してください。アプリ内「診断：状態を見る」も有効です。
-              それでもダメなら、アプリを終了→再起動、macOS再起動を試してください。
-            </p>
-          </details>
-          <details>
-            <summary>権限をONにしたのに「未許可」と表示されます</summary>
-            <p>
-              Xcodeのデバッグ実行と /Applications の実体が混在している可能性があります。
-              いま動いているアプリの実体（パス）を揃え、権限一覧で一度OFF→ONし直してください。
-            </p>
-          </details>
-          <details>
-            <summary>セキュリティ警告で起動できません</summary>
-            <p>
-              Finderでアプリを右クリック→「開く」。または「システム設定 → プライバシーとセキュリティ」下部の許可ボタンから開いてください。
-              （署名/公証対応は将来的に検討できます）
-            </p>
-          </details>
-          <details>
-            <summary>⌘ショートカットと干渉しませんか？</summary>
-            <p>
-              かなCmdは「⌘単押し」を主に検知し、⌘＋他キーが押された場合は切替しないように作るのが一般的です。
-              万一気になる挙動があればIssueで報告してください（OS/キーボード環境も併記）。
-            </p>
-          </details>
+        <div class="glass feature">
+          <p style="margin:0;color:rgba(255,255,255,.68);line-height:1.9;font-size:13px">
+            1) <a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener"><b>Releases（latest）</b></a> から zip をダウンロード<br/>
+            2) 展開して <b>かなCmd.app</b> を Applications（アプリケーション）へ移動<br/>
+            3) 権限を許可：<b>入力監視（Input Monitoring）</b> と <b>アクセシビリティ（Accessibility）</b><br/>
+            4) うまく動かない場合はアプリ再起動／macOS再起動
+          </p>
         </div>
       </section>
 
       <section id="links">
         <h2 class="sectionTitle">リンク</h2>
-        <div class="twoCol">
-          <div class="glass step">
-            <h3 style="margin:0 0 10px">ダウンロード</h3>
-            <p style="margin:0;color:var(--muted);line-height:1.8;font-size:13px">
-              ✅ 最新版（推奨）：<br/>
-              <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>/releases/latest" target="_blank" rel="noopener">
-                https://github.com/&lt;YOUR-USER&gt;/&lt;YOUR-REPO&gt;/releases/latest
-              </a>
-              <br/><br/>
-              Releases一覧：<br/>
-              <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>/releases" target="_blank" rel="noopener">
-                https://github.com/&lt;YOUR-USER&gt;/&lt;YOUR-REPO&gt;/releases
-              </a>
-            </p>
-          </div>
-          <div class="glass step">
-            <h3 style="margin:0 0 10px">開発・サポート</h3>
-            <p style="margin:0;color:var(--muted);line-height:1.8;font-size:13px">
-              GitHub：<br/>
-              <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>" target="_blank" rel="noopener">
-                https://github.com/&lt;YOUR-USER&gt;/&lt;YOUR-REPO&gt;
-              </a>
-              <br/><br/>
-              不具合報告 / 要望：<br/>
-              <a href="https://github.com/<YOUR-USER>/<YOUR-REPO>/issues" target="_blank" rel="noopener">
-                https://github.com/&lt;YOUR-USER&gt;/&lt;YOUR-REPO&gt;/issues
-              </a>
-            </p>
-            <div style="margin-top:12px" class="notice">
-              ※ 公開前に、このHTML内の <b>&lt;YOUR-USER&gt;/&lt;YOUR-REPO&gt;</b> を実際のURLに差し替えてください。
-            </div>
-          </div>
+        <div class="glass feature">
+          <p style="margin:0;color:rgba(255,255,255,.68);line-height:1.9;font-size:13px">
+            GitHub：<a href="https://github.com/baked-appleholic/kanacmd" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd</a><br/>
+            Download：<a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd/releases/latest</a><br/>
+            Issues：<a href="https://github.com/baked-appleholic/kanacmd/issues" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd/issues</a>
+          </p>
         </div>
       </section>
 
