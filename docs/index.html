@@ -19,49 +19,64 @@
 
   <style>
     :root{
-      --bg: #0b0f17;
-      --card: rgba(255,255,255,.06);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.68);
-      --line: rgba(255,255,255,.12);
-      --accent: #8dd5ff;
-      --accent2:#b7ffdf;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      /* Light base */
+      --bg: #f7f8fb;
+      --card: rgba(255,255,255,.78);
+      --text: rgba(18,24,40,.92);
+      --muted: rgba(18,24,40,.62);
+      --line: rgba(18,24,40,.12);
+      --accent: #2f80ff;
+      --accent2:#19c37d;
+      --shadow: 0 18px 60px rgba(10,20,40,.12);
       --radius: 22px;
       --radius2: 14px;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1100px 700px at 15% 10%, rgba(141,213,255,.18), transparent 50%),
-        radial-gradient(1000px 800px at 85% 25%, rgba(183,255,223,.14), transparent 55%),
-        radial-gradient(1200px 900px at 50% 95%, rgba(170,130,255,.12), transparent 50%),
-        linear-gradient(180deg, #070a10 0%, #0b0f17 70%, #070a10 100%);
+        radial-gradient(900px 600px at 15% 10%, rgba(47,128,255,.14), transparent 55%),
+        radial-gradient(900px 700px at 85% 22%, rgba(25,195,125,.12), transparent 55%),
+        radial-gradient(1100px 800px at 50% 95%, rgba(170,130,255,.10), transparent 55%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 70%, #ffffff 100%);
       overflow-x:hidden;
     }
+
     a{color:inherit}
     .wrap{max-width:1040px;margin:0 auto;padding:32px 20px 72px}
+
     header{
       display:flex;align-items:center;justify-content:space-between;gap:12px;
       position:sticky;top:0;z-index:20;
       backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(11,15,23,.78) 0%, rgba(11,15,23,.35) 100%);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.70) 100%);
+      border-bottom: 1px solid var(--line);
       margin: -32px -20px 0;
       padding: 14px 20px;
     }
+
     .brand{display:flex;align-items:center;gap:10px}
+
     .logo{
       width:34px;height:34px;border-radius:12px;
-      background: radial-gradient(120% 120% at 30% 25%, rgba(255,255,255,.35), rgba(255,255,255,.06) 45%, rgba(0,0,0,.2) 100%);
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      background: radial-gradient(120% 120% at 30% 25%, rgba(255,255,255,1), rgba(255,255,255,.70) 45%, rgba(220,230,255,.70) 100%);
+      border:1px solid rgba(18,24,40,.14);
+      box-shadow: 0 10px 30px rgba(10,20,40,.10);
       display:grid;place-items:center;
+      overflow:hidden;
     }
-    .logo span{font-weight:800;letter-spacing:.02em}
+    .logo img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .logo span{ display:none; } /* spanが残ってても消す */
+
     nav{display:flex;gap:14px;flex-wrap:wrap}
     nav a{
       text-decoration:none;
@@ -69,80 +84,86 @@
       padding:8px 10px;border-radius:12px;
       border:1px solid transparent;
     }
-    .logo img{
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* はみ出さず収める */
-      display: block;
+    nav a:hover{
+      color:var(--text);
+      border-color: rgba(18,24,40,.12);
+      background: rgba(255,255,255,.70);
     }
-    .logo span{ display:none; } /* もしspanが残ってても消す */
-    
-    nav a:hover{color:var(--text);border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
 
     .hero{padding:44px 0 22px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
     @media (max-width: 900px){.hero{grid-template-columns:1fr;}}
 
     .glass{
-      background: radial-gradient(140% 140% at 15% 10%, rgba(255,255,255,.18), rgba(255,255,255,.06) 45%, rgba(255,255,255,.02) 100%);
-      border:1px solid rgba(255,255,255,.12);
+      background: radial-gradient(140% 140% at 15% 10%, rgba(255,255,255,.96), rgba(255,255,255,.74) 55%, rgba(255,255,255,.60) 100%);
+      border:1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
+
     .heroCard{padding:28px}
+
     .kicker{
       display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;color:rgba(255,255,255,.76);
+      font-size:12px;color: rgba(18,24,40,.72);
       padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
+      border:1px solid rgba(18,24,40,.12);
+      background: rgba(255,255,255,.70);
     }
+
     .dot{
       width:8px;height:8px;border-radius:99px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 6px rgba(141,213,255,.14);
+      box-shadow: 0 0 0 6px rgba(47,128,255,.10);
     }
 
     h1{margin:14px 0 10px;font-size:42px;line-height:1.08;letter-spacing:-.02em}
     @media (max-width: 520px){h1{font-size:34px}}
+
     .sub{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.65}
 
     .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
     .btn{
       text-decoration:none;
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 14px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
+      border:1px solid rgba(18,24,40,.14);
+      background: rgba(255,255,255,.82);
       color:var(--text);
-      font-weight:700;
+      font-weight:750;
       min-width: 180px;
     }
-    .btn:hover{background: rgba(255,255,255,.10)}
+    .btn:hover{background: rgba(255,255,255,.96)}
+
     .btnPrimary{
-      border-color: rgba(141,213,255,.35);
-      background: linear-gradient(135deg, rgba(141,213,255,.24), rgba(183,255,223,.18));
+      border-color: rgba(47,128,255,.28);
+      background: linear-gradient(135deg, rgba(47,128,255,.16), rgba(25,195,125,.12));
     }
-    .btnPrimary:hover{filter:brightness(1.06)}
+    .btnPrimary:hover{filter:brightness(1.02)}
 
     .badgeRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .badgeRow img{height:20px}
-    .mini{font-size:12px;color:rgba(255,255,255,.62);margin-top:10px}
+
+    .mini{font-size:12px;color: rgba(18,24,40,.56);margin-top:10px}
 
     .sideCard{padding:22px}
-    .sideTitle{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 10px}
+    .sideTitle{font-size:14px;color: rgba(18,24,40,.72);margin:0 0 10px}
+
     .statGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     .stat{
       padding:12px;border-radius:16px;
-      background: rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.78);
+      border:1px solid rgba(18,24,40,.10);
     }
     .stat b{display:block;font-size:13px}
-    .stat span{display:block;margin-top:4px;color:rgba(255,255,255,.68);font-size:12px;line-height:1.4}
+    .stat span{display:block;margin-top:4px;color: rgba(18,24,40,.62);font-size:12px;line-height:1.4}
 
     section{margin-top:22px}
     .sectionTitle{font-size:18px;margin:0 0 12px}
+
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media (max-width: 900px){.grid3{grid-template-columns:1fr}}
+
     .feature{padding:18px}
     .feature h3{margin:0 0 8px;font-size:16px}
     .feature p{margin:0;color:var(--muted);line-height:1.7;font-size:13px}
@@ -152,33 +173,41 @@
 
     .panel{padding:18px}
     .panel p{margin:0;color:var(--muted);line-height:1.9;font-size:13px}
+
     .callout{
       margin-top:12px;
       padding:12px 14px;
       border-radius:16px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      color: rgba(255,255,255,.74);
+      border:1px solid rgba(18,24,40,.12);
+      background: rgba(255,255,255,.82);
+      color: rgba(18,24,40,.72);
       font-size:12px;line-height:1.75;
     }
+
     .list{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.85;font-size:13px}
 
     details{
-      border:1px solid rgba(255,255,255,.12);
+      border:1px solid rgba(18,24,40,.12);
       border-radius:16px;
-      background: rgba(255,255,255,.04);
+      background: rgba(255,255,255,.82);
       padding:12px 14px;
     }
     details + details{margin-top:10px}
     summary{cursor:pointer;font-weight:750}
     details p{margin:10px 0 0;color:var(--muted);line-height:1.75;font-size:13px}
 
-    footer{margin-top:34px;color:rgba(255,255,255,.55);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    footer{
+      margin-top:34px;
+      color: rgba(18,24,40,.55);
+      font-size:12px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
+    }
+
     .pill{
       display:inline-flex;gap:8px;align-items:center;
-      font-size:12px;color:rgba(255,255,255,.78);
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
+      font-size:12px;color: rgba(18,24,40,.72);
+      border:1px solid rgba(18,24,40,.12);
+      background: rgba(255,255,255,.72);
       padding:7px 10px;border-radius:999px;
       white-space:nowrap;
     }
@@ -189,11 +218,12 @@
   <div class="wrap">
     <header>
       <div class="brand">
-      <div class="logo" aria-hidden="true">
-        <img src="./img/kanaCmd_icon_1024.png" alt="かなCmd" /></div>
-      <div>
+        <div class="logo" aria-hidden="true">
+          <img src="./img/kanaCmd_icon_1024.png" alt="かなCmd" />
+        </div>
+        <div>
           <div style="font-weight:850;line-height:1">かなCmd</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.68);line-height:1.2">KanaCmd for macOS</div>
+          <div style="font-size:12px;color:rgba(18,24,40,.62);line-height:1.2">KanaCmd for macOS</div>
         </div>
       </div>
       <nav>
@@ -362,10 +392,10 @@
               <summary>セキュリティ警告で起動できません</summary>
               <p>システム設定 → プライバシーとセキュリティ の下部にある「このまま開く」から許可できます。Finderで右クリック→開くでも起動できます。</p>
             </details>
-            <!--<details>
-              <summary>配布がもっと楽になる方法は？</summary>
-              <p>Developer ID署名 + Notarization（公証）を行うと、警告が出にくくなり配布が楽になります（Apple Developer Programが必要）。</p>
-            </details>-->
+            <details>
+              <summary>安全ですか？</summary>
+              <p>入力切替のために必要な権限（入力監視/アクセシビリティ）を使います。入力内容を保存・送信する機能はありません。ソースコードはGitHubで公開しています。</p>
+            </details>
           </div>
         </div>
       </section>
