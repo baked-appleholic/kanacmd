@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>かなCmd（KanaCmd）｜US配列の「かな/英数」を⌘単押しで切替</title>
-  <meta name="description" content="かなCmdは、US配列キーボード環境で左右のCommand（⌘）キー単押しにより「かな/英数」を切り替えるmacOSメニューバーアプリです。⌘英かな代替として、macOSのアップデート後も安定動作を目指します。" />
+  <meta name="description" content="かなCmdは、US配列キーボードで左右のCommand（⌘）キー単押しにより「かな/英数」を切り替えるmacOSメニューバーアプリです。⌘英かな代替にも。" />
   <meta name="keywords" content="かなCmd,KanaCmd,⌘英かな,代替,USキーボード,英数,かな,入力切替,macOS,Commandキー,メニューバーアプリ" />
   <meta name="robots" content="index,follow" />
 
@@ -28,6 +28,7 @@
       --accent2:#b7ffdf;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 22px;
+      --radius2: 14px;
     }
     *{box-sizing:border-box}
     body{
@@ -60,7 +61,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,.35);
       display:grid;place-items:center;
     }
-    .logo span{font-weight:700;letter-spacing:.02em}
+    .logo span{font-weight:800;letter-spacing:.02em}
     nav{display:flex;gap:14px;flex-wrap:wrap}
     nav a{
       text-decoration:none;
@@ -69,8 +70,10 @@
       border:1px solid transparent;
     }
     nav a:hover{color:var(--text);border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
-    .hero{padding:44px 0 26px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
+
+    .hero{padding:44px 0 22px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
     @media (max-width: 900px){.hero{grid-template-columns:1fr;}}
+
     .glass{
       background: radial-gradient(140% 140% at 15% 10%, rgba(255,255,255,.18), rgba(255,255,255,.06) 45%, rgba(255,255,255,.02) 100%);
       border:1px solid rgba(255,255,255,.12);
@@ -90,9 +93,11 @@
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       box-shadow: 0 0 0 6px rgba(141,213,255,.14);
     }
+
     h1{margin:14px 0 10px;font-size:42px;line-height:1.08;letter-spacing:-.02em}
     @media (max-width: 520px){h1{font-size:34px}}
     .sub{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.65}
+
     .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .btn{
       text-decoration:none;
@@ -101,7 +106,7 @@
       border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.06);
       color:var(--text);
-      font-weight:600;
+      font-weight:700;
       min-width: 180px;
     }
     .btn:hover{background: rgba(255,255,255,.10)}
@@ -110,17 +115,65 @@
       background: linear-gradient(135deg, rgba(141,213,255,.24), rgba(183,255,223,.18));
     }
     .btnPrimary:hover{filter:brightness(1.06)}
-    .mini{font-size:12px;color:rgba(255,255,255,.62);margin-top:10px}
+
     .badgeRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .badgeRow img{height:20px}
-    section{margin-top:24px}
+    .mini{font-size:12px;color:rgba(255,255,255,.62);margin-top:10px}
+
+    .sideCard{padding:22px}
+    .sideTitle{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 10px}
+    .statGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .stat{
+      padding:12px;border-radius:16px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .stat b{display:block;font-size:13px}
+    .stat span{display:block;margin-top:4px;color:rgba(255,255,255,.68);font-size:12px;line-height:1.4}
+
+    section{margin-top:22px}
+    .sectionTitle{font-size:18px;margin:0 0 12px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media (max-width: 900px){.grid3{grid-template-columns:1fr}}
     .feature{padding:18px}
     .feature h3{margin:0 0 8px;font-size:16px}
-    .feature p{margin:0;color:var(--muted);line-height:1.6;font-size:13px}
-    .sectionTitle{font-size:18px;margin:0 0 12px}
+    .feature p{margin:0;color:var(--muted);line-height:1.7;font-size:13px}
+
+    .twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 900px){.twoCol{grid-template-columns:1fr}}
+
+    .panel{padding:18px}
+    .panel p{margin:0;color:var(--muted);line-height:1.9;font-size:13px}
+    .callout{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.74);
+      font-size:12px;line-height:1.75;
+    }
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.85;font-size:13px}
+
+    details{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      padding:12px 14px;
+    }
+    details + details{margin-top:10px}
+    summary{cursor:pointer;font-weight:750}
+    details p{margin:10px 0 0;color:var(--muted);line-height:1.75;font-size:13px}
+
     footer{margin-top:34px;color:rgba(255,255,255,.55);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      font-size:12px;color:rgba(255,255,255,.78);
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      padding:7px 10px;border-radius:999px;
+      white-space:nowrap;
+    }
   </style>
 </head>
 
@@ -130,18 +183,21 @@
       <div class="brand">
         <div class="logo" aria-hidden="true"><span>⌘</span></div>
         <div>
-          <div style="font-weight:750;line-height:1">かなCmd</div>
+          <div style="font-weight:850;line-height:1">かなCmd</div>
           <div style="font-size:12px;color:rgba(255,255,255,.68);line-height:1.2">KanaCmd for macOS</div>
         </div>
       </div>
       <nav>
-        <a href="#features">機能</a>
+        <a href="#features">特徴</a>
+        <a href="#download">Download</a>
         <a href="#install">インストール</a>
+        <a href="#faq">FAQ</a>
         <a href="#links">リンク</a>
       </nav>
     </header>
 
     <main>
+      <!-- HERO -->
       <div class="hero">
         <div class="glass heroCard">
           <div class="kicker"><span class="dot"></span><span>US配列ユーザー向け / ⌘英かな代替</span></div>
@@ -151,7 +207,7 @@
             <b>macOSメニューバー常駐アプリ</b>です。
           </p>
 
-          <div class="ctaRow">
+          <div id="download" class="ctaRow">
             <a class="btn btnPrimary" href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener">
               ⬇︎ Download（最新版）
             </a>
@@ -172,54 +228,157 @@
             </a>
           </div>
 
-          <p class="mini">※ 初回起動でブロックされた場合：Finderで右クリック →「開く」</p>
+          <p class="mini">※初回起動でブロックされた場合も、手順通りに許可すれば起動できます（下に詳しく記載）。</p>
         </div>
+
+        <aside class="glass sideCard">
+          <p class="sideTitle">こんな人におすすめ</p>
+          <div class="statGrid">
+            <div class="stat">
+              <b>US配列で困ってる</b>
+              <span>かな/英数切替が面倒・安定しない</span>
+            </div>
+            <div class="stat">
+              <b>⌘英かな代替が欲しい</b>
+              <span>アップデート後に固まる/反応しない</span>
+            </div>
+            <div class="stat">
+              <b>ショートカットを守りたい</b>
+              <span>⌘単押しを狙って切替（誤爆抑制）</span>
+            </div>
+            <div class="stat">
+              <b>常駐は軽くしたい</b>
+              <span>メニューバーだけで完結</span>
+            </div>
+          </div>
+
+          <div class="callout">
+            <span class="pill">対応OS：macOS 13+</span>
+            <span class="pill">ログイン時起動：macOS 13+</span>
+          </div>
+        </aside>
       </div>
 
+      <!-- FEATURES -->
       <section id="features">
-        <h2 class="sectionTitle">できること</h2>
+        <h2 class="sectionTitle">特徴</h2>
         <div class="grid3">
           <div class="glass feature">
             <h3>左右⌘の単押しで切替</h3>
-            <p>Commandキー単押しだけを検知し、かな/英数へ切り替えます。</p>
+            <p>Commandキー単押しだけを検知して、かな/英数へ切り替えます。</p>
           </div>
           <div class="glass feature">
             <h3>割り当ての入れ替え</h3>
             <p>左⌘=かな／右⌘=英数 をワンタップで反転できます。</p>
           </div>
           <div class="glass feature">
-            <h3>ログイン時起動</h3>
-            <p>ログイン時に自動起動（macOS 13+）。メニューバーに常駐します。</p>
+            <h3>ログイン時起動（macOS 13+）</h3>
+            <p>ログイン時に自動起動。メニューバーに常駐してすぐ使えます。</p>
+          </div>
+          <div class="glass feature">
+            <h3>Dock表示の切り替え</h3>
+            <p>Dockに表示/非表示を選べます。常駐ツールとしてスッキリ運用。</p>
+          </div>
+          <div class="glass feature">
+            <h3>診断メニュー</h3>
+            <p>権限（入力監視/アクセシビリティ）やEventTap状態を表示して切り分けが楽。</p>
+          </div>
+          <div class="glass feature">
+            <h3>軽量・シンプル</h3>
+            <p>必要機能だけに絞ったミニマル設計。迷わず使えます。</p>
           </div>
         </div>
       </section>
 
+      <!-- INSTALL -->
       <section id="install">
         <h2 class="sectionTitle">インストール</h2>
-        <div class="glass feature">
-          <p style="margin:0;color:rgba(255,255,255,.68);line-height:1.9;font-size:13px">
-            1) <a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener"><b>Releases（latest）</b></a> から zip をダウンロード<br/>
-            2) 展開して <b>かなCmd.app</b> を Applications（アプリケーション）へ移動<br/>
-            3) 権限を許可：<b>入力監視（Input Monitoring）</b> と <b>アクセシビリティ（Accessibility）</b><br/>
-            4) うまく動かない場合はアプリ再起動／macOS再起動
+        <div class="twoCol">
+          <div class="glass panel">
+            <p>
+              1) <a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener"><b>最新版（Releases/latest）</b></a> から zip をダウンロード<br/>
+              2) 展開して <b>かなCmd.app</b> を <b>Applications（アプリケーション）</b> に移動<br/>
+              3) 起動後、<b>入力監視</b> と <b>アクセシビリティ</b> の権限を許可<br/>
+              4) うまく動かない場合はアプリ再起動／macOS再起動
+            </p>
+
+            <div class="callout">
+              <b>Tip：</b> Xcodeからの実行と /Applications の実行が混ざると、権限が別扱いになって迷子になりがちです。通常利用は /Applications から起動がおすすめ。
+            </div>
+          </div>
+
+          <div class="glass panel">
+            <p><b>必要な権限（重要）</b></p>
+            <ul class="list">
+              <li><b>入力監視（Input Monitoring）</b><br/>システム設定 → プライバシーとセキュリティ → 入力監視 → かなCmd をON</li>
+              <li><b>アクセシビリティ（Accessibility）</b><br/>システム設定 → プライバシーとセキュリティ → アクセシビリティ → かなCmd をON</li>
+            </ul>
+            <div class="callout">
+              アプリ内メニュー <b>「診断：状態を見る」</b> で確認できます。
+            </div>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="glass panel">
+          <p><b>初回起動でブロックされる場合（Gatekeeper）</b></p>
+          <p style="margin-top:8px">
+            本アプリは現時点で「署名/公証（Notarization）」が未対応のため、初回起動時に macOS によりブロックされる場合があります。<br/>
+            これはマルウェア検出ではなく、Appleが開発元を検証できない（未公証）ことによる警告です。
           </p>
+          <ul class="list">
+            <li>システム設定 → プライバシーとセキュリティ → 画面下部の <b>「このまま開く」</b></li>
+            <li>または、Finderでアプリを右クリック（control+クリック）→ <b>開く</b></li>
+          </ul>
         </div>
       </section>
 
+      <!-- FAQ -->
+      <section id="faq">
+        <h2 class="sectionTitle">FAQ</h2>
+        <div class="twoCol">
+          <div class="glass panel">
+            <details>
+              <summary>キーを押しても切り替わりません</summary>
+              <p>まず「入力監視」と「アクセシビリティ」がONか確認してください。アプリ内「診断：状態を見る」でも確認できます。アプリ再起動やmacOS再起動も有効です。</p>
+            </details>
+            <details>
+              <summary>権限をONにしたのに「未許可」と表示されます</summary>
+              <p>Xcode実行と /Applications の実体が混在している可能性があります。起動しているアプリの実体を揃え、権限一覧で一度OFF→ONし直してください。</p>
+            </details>
+          </div>
+          <div class="glass panel">
+            <details>
+              <summary>セキュリティ警告で起動できません</summary>
+              <p>システム設定 → プライバシーとセキュリティ の下部にある「このまま開く」から許可できます。Finderで右クリック→開くでも起動できます。</p>
+            </details>
+            <details>
+              <summary>配布がもっと楽になる方法は？</summary>
+              <p>Developer ID署名 + Notarization（公証）を行うと、警告が出にくくなり配布が楽になります（Apple Developer Programが必要）。</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINKS -->
       <section id="links">
         <h2 class="sectionTitle">リンク</h2>
-        <div class="glass feature">
-          <p style="margin:0;color:rgba(255,255,255,.68);line-height:1.9;font-size:13px">
+        <div class="glass panel">
+          <p>
             GitHub：<a href="https://github.com/baked-appleholic/kanacmd" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd</a><br/>
-            Download：<a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd/releases/latest</a><br/>
+            Download（latest）：<a href="https://github.com/baked-appleholic/kanacmd/releases/latest" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd/releases/latest</a><br/>
             Issues：<a href="https://github.com/baked-appleholic/kanacmd/issues" target="_blank" rel="noopener">https://github.com/baked-appleholic/kanacmd/issues</a>
           </p>
+          <div class="callout">
+            キーワード：⌘英かな 代替 / USキーボード かな 英数 切り替え / Commandキー 入力ソース切替 / macOS 入力切替
+          </div>
         </div>
       </section>
 
       <footer>
         <div>© <span id="y"></span> かなCmd / KanaCmd</div>
-        <div style="opacity:.8">Keywords: ⌘英かな 代替 / USキーボード かな 英数 切り替え / macOS 入力切替</div>
+        <div style="opacity:.8">macOS Menu Bar Utility</div>
       </footer>
     </main>
   </div>
